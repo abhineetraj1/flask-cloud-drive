@@ -68,6 +68,36 @@
 			document.getElementById('bd').style.height  = window.innerHeight + "px";
 		}
 	}
+	var limit = 25600 - {{space}};
+	document.getElementsByTagName("input")[0].oninput = k;
+	function k() {
+		var n =0;
+		var si= [];
+		var cn=[];
+		while (n < document.getElementsByTagName("input")[0].files.length) {
+			if ((document.getElementsByTagName("input")[0].files[n].size/1024/1024) > 2048) {
+				cn.push(false);
+			}
+			si.push(document.getElementsByTagName("input")[0].files[n].size/1024/1024)
+			n=n+1
+		}
+		var n =0;
+		for (var i = 0; i < si.length; i++) {
+			var n = n+si[i];
+		}
+		if (n > limit) {
+			alert("Storage is not available. Upload less larger file.");
+			document.getElementsByTagName("input")[0].value= null;
+		} else {
+			if (cn[0] == false) {
+				alert("File size should not be greater than 2gb");
+				document.getElementsByTagName("input")[0].value= null;
+			} else {
+				//do nothing
+			}
+		}
+	}
+
 </script>
 </body>
 </html>
