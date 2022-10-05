@@ -1,0 +1,118 @@
+:root{
+	--bg: #007cff;
+}
+.frm-upl{
+	font-size: 23px;
+	font-family: Calibri;
+	text-align: center;
+	border: solid;
+	padding: 3px;
+	color: white;
+	border-radius: 8px;
+	background: var(--bg);
+	margin: 3px;
+}
+#bio{
+	font-size: 20px;
+	font-family: Calibri;
+	text-align: center;
+	width: 100%;
+	color: black;
+	margin: 3px;
+}
+#bd{
+	width: 100%;
+	border-radius: 40px;
+	background: var(--bg);
+	text-align: center;
+	align-items: center;
+	align-content: center;
+}
+.scl-btn{
+	width: 80%;
+	background: white;
+	color: black;
+	border-radius: 9px;
+	margin: 5px;
+	padding: 2px;
+	font-size: 22px;
+	font-family: Cambria Math;
+	border-width: 0px;
+}
+.block-btn{
+	padding: 1vh;
+	margin: 1vh;
+	font-size: 20px;
+	background: white;
+	border-radius: 9px;
+	border: solid;
+}
+.block{
+	width: 250px;
+	border: solid;
+	padding: 1vh;
+	border-radius: 8px;
+	background: white;
+	border-color: var(--bg);
+}
+.block-name{
+	font-size: 22px;
+	font-weight: bold;
+	font-family: Cambria Math;
+}
+.block-size{
+	font-size: 20px;
+	font-family: Calibri;
+}
+#hd{
+	margin-bottom: 5px;
+	margin-top: 0vh;
+	background: white;
+	margin: 2vh;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	height: 100%;
+}
+body{
+	margin: 0vh;
+	padding: 0vh;
+}
+#frm{
+	width: 185px;
+	font-size: 22px;
+	background: white;
+	text-align: center;
+}
+.frm-btn{
+	margin: 3px;
+	text-align: center;
+	background: white;
+	border: solid;
+	border-radius: 8px;
+	font-size: 20px;
+	padding: 3px;
+}
+#frm-i{
+	text-align: left;
+	font-size: 22px;
+	border-radius: 9px;
+	border: solid;
+	height: 120px;
+	width: 180px;
+	margin: 1vh;
+}
+#hd-img{
+	height: 100px;
+	width: 100px;
+	margin: 1vh;
+	border: solid;
+	border-radius: 200px;
+}
+#hd-nm{
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	margin: 0vh;
+	font-family: Cambria Math;
+}

@@ -1,0 +1,54 @@
+:root{
+	--bg: #007cff;
+}
+#img-sign{
+	text-align: center;
+	align-content: center;
+}
+#des{
+	font-family: Cambria Math;
+	color: white;
+	font-size: 23px;
+	width: 80%;
+	text-align: left;
+	margin: 2px;
+	align-self: center;
+}
+#hed{
+	margin: 0vh;
+	font-size: 32px;
+	color: white;
+	font-family: Bahnschrift;
+	font-weight: bolder;
+	text-align: center;
+}
+body{
+	margin: 0vh;
+	padding: 0vh;
+	background: var(--bg);
+}
+#mn{
+	margin: 1vh;
+	border-radius: 9px;
+	height: 30vh;
+}
+#sgn{
+	align-self: center;
+	background: white;
+	padding: 1vh;
+	width: 95%;
+	text-align: center;
+	border-radius: 12px;
+	margin: 0vh;
+}
+.sgn-btn{
+	width: 240px;
+	margin: 1vh;
+	padding: 1vh;
+	background: var(--bg);
+	border: white;
+	border-radius: 7px;
+	font-size: 22px;
+	font-family: Cambria Math;
+	color: white;
+}

@@ -1,0 +1,55 @@
+:root{
+	--bg: #007cff;
+}
+#frm-a{
+	color: var(--bg);
+}
+.frm-inp{
+	text-align: left;
+	padding: 2px;
+	width: 92%;
+	border: solid;
+	border-radius: 6px;
+	height: 25px;
+	font-size: 22px;
+	margin: 3px;
+}
+#img{
+	position: absolute;
+	top: 8vh;
+	height: 55vh;
+	left: 10%;
+}
+form{
+	position: absolute;
+	top: 10vh;
+	left: 65%;
+	text-align: center;
+	padding: 3px;
+	background: white;
+	width: 250px;
+	border-radius: 9px;
+}
+body{
+	text-align: center;
+	background: var(--bg);
+}
+#frm-p{
+	padding: 0vh;
+	margin: 0vh;
+	font-size: 40px;
+	font-family: Calibri;
+	font-weight: bold;
+	text-align: center;
+}
+#frm-btn{
+	color: white;
+	background: var(--bg);
+	border-radius: 40px;
+	height: 30px;
+	font-size: 22px;
+	width: 120px;
+	padding: 3px;
+	border-width: 0px;
+
+}

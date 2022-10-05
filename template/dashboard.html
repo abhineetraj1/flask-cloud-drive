@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/static/images/ic.png">
+	<link rel="stylesheet" type="text/css" href="/static/css/profile.max.css">
+	<script type="text/javascript">
+		if (window.innerHeight/window.innerWidth < 3/5) {
+			document.getElementsByTagName('link')[1].href="/static/css/profile.min.css";
+		}
+	</script>
+	<script type="text/javascript" src="/static/script/profile.js"></script>
+	<title>Dashboard</title>
+</head>
+<body>
+
+<div id="hd">
+	<img src="/static/avatars/blank.png" id="hd-img">
+	<br>
+	<p id="hd-nm">{{name}}</p>
+	<br>
+	<div id="bio">
+		<table>
+			<tr>
+				<td>Number of files: </td>
+				<td>{{nf}}</td>
+			</tr>
+			<tr>
+				<td>Total space used: </td>
+				<td>{{space}} mb</td>
+			</tr>
+			<tr>
+				<td>Space available: </td>
+				<td><script>document.write(Math.floor((25 - ({{space}})/1024)*1000)/1000);</script> gb</td>
+			</tr>
+			<tr>
+				<form method="POST" action="/upload/{{username}}/{{password}}/file"  enctype="multipart/form-data">
+				<td>
+					<label class="frm-upl">Select files
+						<input type="file" name="files[]" multiple style="display:none;">
+					</label>
+				</td></form>
+				<td><button onclick="frm_s()" class="frm-upl"> Upload</button></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id="bd" style="overflow:scroll;">
+	<br>
+	<center>
+	{% for i in files %}
+	<div class="block">
+		<div class="block-name">{{i.name}}</div>
+		<div class="block-size">File size: {{i.size}}</div>
+		<div>
+			<a href="/delete/{{username}}/{{password}}/name/{{i.name}}"><button class="block-btn">Delete</button></a>
+		</div>
+	</div>
+	<br>
+	{% endfor %}
+	</center>
+</div>
+<script>
+	if (window.innerHeight/window.innerWidth < 3/5) {
+		if (document.getElementById('bd').style.height < window.innerHeight/1.6) {
+			document.getElementById('bd').style.height  = window.innerHeight + "px";
+		}
+	}
+</script>
+</body>
+</html>

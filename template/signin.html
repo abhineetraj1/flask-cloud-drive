@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/static/images/ic.png">
+	<link rel="stylesheet" type="text/css" href="/static/css/signin.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign in</title>
+</head>
+<body>
+
+<img src="/static/images/doc1.gif" id="img">
+
+<form method="POST" action="/sign_in">
+	<p id="frm-p">Sign in</p>
+	<img id="frm-img" src="/static/avatars/blank.png" style="border-radius: 200px;height: 120px;width: 120px;">
+	<input class="frm-inp" type="text" name="username" placeholder="Enter username">
+	<input class="frm-inp" type="password" name="password" placeholder="Enter password">
+	<br><br>
+	<button id="frm-btn">Sign in</button>
+	<br><br><br>
+	<a id="frm-a" href="/sign_up">Don't have an account?</a>
+	<br><br>
+</form>
+<script type="text/javascript">
+	if ("{{message}}" == "") {
+		//donothing
+	} else {
+		alert("{{message}}")
+	}
+</script>
+<script type="text/javascript" src="/static/script/signin.ui.js"></script>
+</body>
+</html>
