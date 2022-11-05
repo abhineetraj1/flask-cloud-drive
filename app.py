@@ -1,5 +1,5 @@
 from flask import *
-from flask import render_template
+from flask import render_template, send_file
 import shutil, os, datetime, random
 
 app = Flask(__name__, static_folder="static", template_folder="template")
@@ -89,6 +89,18 @@ def main5(user, pas, name):
 				name = rf("profiles/"+w[0]+"/name")
 				password=rf("profiles/"+w[0]+"/password")
 				return render_template("dashboard.html", name=name, files=files, password=password, username=w[0], space=round(space), nf=len(files))
+			else:
+				return ""
+		else:
+			return ""
+@app.route("/download/<user>/<pas>/name/<name>", methods=["GET"])
+def main5(user, pas, name):
+	if (request.method == "GET"):
+		w = [user,pas]
+		if (w[0] in os.listdir("profiles")):
+			if (w[1] == rf("profiles/"+w[0]+"/password")):
+				if (name in os.listdir("profiles/"+w[0]+"/files")):
+					return send_file("profiles/"+w[0]+"/files/"+name)
 			else:
 				return ""
 		else:
