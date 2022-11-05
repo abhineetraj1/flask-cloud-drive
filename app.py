@@ -94,7 +94,7 @@ def main5(user, pas, name):
 		else:
 			return ""
 @app.route("/download/<user>/<pas>/name/<name>", methods=["GET"])
-def main5(user, pas, name):
+def main15(user, pas, name):
 	if (request.method == "GET"):
 		w = [user,pas]
 		if (w[0] in os.listdir("profiles")):
